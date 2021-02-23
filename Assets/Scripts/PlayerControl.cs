@@ -36,7 +36,6 @@ public class PlayerControl : MonoBehaviour
         float pitch = transform.localPosition.y * pitchFactor;
         float yaw = 0;
         float roll = 0;
-        print(" local pos ????????? " + transform.localPosition.y);
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
