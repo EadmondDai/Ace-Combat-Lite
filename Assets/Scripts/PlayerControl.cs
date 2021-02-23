@@ -15,6 +15,5 @@ public class PlayerControl : MonoBehaviour
     {
         float horizontalMove = Input.GetAxis("Horizontal");
         float verticalMove = Input.GetAxis("Vertical");
-        print(" X and Y " + horizontalMove + "  " + verticalMove);
     }
 }
