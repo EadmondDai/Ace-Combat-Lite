@@ -189,6 +189,71 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5253993008771630354, guid: b83067dfd52186841a52c414143924f0, type: 3}
   m_PrefabInstance: {fileID: 199245320}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &199245322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5253993008771630352, guid: b83067dfd52186841a52c414143924f0, type: 3}
+  m_PrefabInstance: {fileID: 199245320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &199245323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199245322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23bfdbf8e98846e41881e443d78acf95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputMove:
+    m_Name: Input Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: babc32ef-c5e7-43e0-92c1-e9150f142c31
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: ec57a241-eb22-4777-bc51-929c07ac11fe
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Move
+      m_Flags: 4
+    - m_Name: up
+      m_Id: ec37f775-c7ee-4cbd-bbd7-08c80af3a5a8
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Move
+      m_Flags: 8
+    - m_Name: down
+      m_Id: ebdc1a38-7140-4991-8084-fcfaf25c975e
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Move
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 138adbb3-42bc-4c56-8db5-9055aaeff3df
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Move
+      m_Flags: 8
+    - m_Name: right
+      m_Id: b77c1314-107e-4666-8bb3-405b807be52d
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Move
+      m_Flags: 8
 --- !u!1 &393121383
 GameObject:
   m_ObjectHideFlags: 0
