@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float yRange = 10f;
     private Vector3 defualtRelatPos;
     [SerializeField] float pitchFactor = 2.0f;
-    [SerializeField] float controlPitchFactor = -10f;
+    [SerializeField] float controlPitchFactor = -100f;
     [SerializeField] float yawFactor = -2;
     [SerializeField] float controlRollFactor = -5;
 
