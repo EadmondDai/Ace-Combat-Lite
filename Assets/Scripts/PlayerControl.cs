@@ -2,24 +2,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
+    [Header("Ship control settings")]
+    [Tooltip("Controls how fast the ship moves")]
     [Range(0, 100)][SerializeField] float moveSpeed;
+    [Tooltip("Controls how far can the ship move")]
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 10f;
-    private Vector3 defualtRelatPos;
+    
+    [Tooltip("Control how the ship roate based on the screen position")]
     [SerializeField] float pitchFactor = 2.0f;
-    [SerializeField] float controlPitchFactor = -100f;
     [SerializeField] float yawFactor = -2;
+
+    [Tooltip("Controls how fast the ship reacts to the input")]
+    [SerializeField] float controlPitchFactor = -100f;
     [SerializeField] float controlRollFactor = -5;
 
+    [Tooltip("Your friendly enemy killing neibhbor")]
+    [SerializeField] GameObject[] lasers;
+
+    [SerializeField] float delayLoadingTime = 1.0f;
     protected float xMove, yMove;
 
     // Start is called before the first frame update
     void Start()
     {
-        defualtRelatPos = transform.localPosition;
     }
 
     // Update is called once per frame
@@ -31,6 +41,29 @@ public class PlayerControl : MonoBehaviour
 
         handleTransition(xMove, yMove, deltaTime);
         handleRotation(xMove, yMove);
+        handleFireing();
+    }
+
+    private void handleFireing()
+    {
+        // If press down fire then shooting is enabled.
+        if (Input.GetButton("Fire1"))
+        {
+            toggleLaser(true);
+        }
+        else
+        {
+            toggleLaser(false);
+        }
+    }
+
+    private void toggleLaser(bool active)
+    {
+        foreach (GameObject laser in lasers)
+        {
+            var emissionSystem = laser.GetComponent<ParticleSystem>().emission;
+            emissionSystem.enabled = active;
+        }
     }
 
     private void handleRotation(float xMove, float yMove)
@@ -47,7 +80,18 @@ public class PlayerControl : MonoBehaviour
         Vector3 myLocalPos = transform.localPosition;
         transform.localPosition = new Vector3(
             Mathf.Clamp(myLocalPos.x + xMove * moveSpeed * deltaTime, -xRange, xRange),
-            Mathf.Clamp(myLocalPos.y + yMove * moveSpeed * deltaTime, -yRange + defualtRelatPos.y, yRange + defualtRelatPos.y),
+            Mathf.Clamp(myLocalPos.y + yMove * moveSpeed * deltaTime, -yRange, yRange),
             myLocalPos.z);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        this.gameObject.SetActive(false);
+        Invoke("reloadScene", delayLoadingTime);
+    }
+    void reloadScene()
+    {
+        int curIdx = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(curIdx);
     }
 }
