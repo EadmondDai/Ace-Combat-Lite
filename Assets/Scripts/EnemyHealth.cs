@@ -20,7 +20,6 @@ public class EnemyHealth : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        print(this.name + "  is hit by  " + other.name);
         Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
