@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class PlayerControl : MonoBehaviour
 {
@@ -24,7 +24,6 @@ public class PlayerControl : MonoBehaviour
     [Tooltip("Your friendly enemy killing neibhbor")]
     [SerializeField] GameObject[] lasers;
 
-    [SerializeField] float delayLoadingTime = 1.0f;
     protected float xMove, yMove;
 
     // Start is called before the first frame update
@@ -84,14 +83,5 @@ public class PlayerControl : MonoBehaviour
             myLocalPos.z);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        this.gameObject.SetActive(false);
-        Invoke("reloadScene", delayLoadingTime);
-    }
-    void reloadScene()
-    {
-        int curIdx = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(curIdx);
-    }
+
 }
