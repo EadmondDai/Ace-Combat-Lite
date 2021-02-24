@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] GameObject deathVFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,8 @@ public class EnemyHealth : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        print( this.name + " hit by " + other.name);
+        print(this.name + "  is hit by  " + other.name);
+        Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 }
