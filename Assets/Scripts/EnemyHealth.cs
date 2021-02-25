@@ -10,11 +10,15 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] int enemyHealth = 5;
     [Range(0, 5000)] [SerializeField] int score = 500;
 
-    ScoreBoard scoreBoard;
+    private ScoreBoard scoreBoard;
 
     private void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        //gameObject.AddComponent<Rigidbody>();
+        //var rigidBody = FindObjectOfType<Rigidbody>();
+        //rigidBody.useGravity = false;
+        //rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
     }
 
     void OnParticleCollision(GameObject other)

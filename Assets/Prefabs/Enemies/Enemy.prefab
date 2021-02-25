@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4067759694946007941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405936497457504262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a82315839deb4841a48a53f75c9a7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 5086115071040521533, guid: 74816b1daa31d2e41ba535213fcdc1f5, type: 3}
+  deathVFX: {fileID: 5086115071040521533, guid: 6362c430483e6fb49a06371c6330c431, type: 3}
+  spawnParent: {fileID: 0}
+  enemyHealth: 3
+  score: 500
+--- !u!54 &596050257474945170
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405936497457504262}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &407326995469207860
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,8 +44,6 @@ GameObject:
   - component: {fileID: 407326995469207856}
   - component: {fileID: 407326995469207857}
   - component: {fileID: 2081456340}
-  - component: {fileID: 6153235569598771215}
-  - component: {fileID: 6539835449532309504}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -62,36 +93,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6153235569598771215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407326995469207860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a82315839deb4841a48a53f75c9a7de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 5086115071040521533, guid: 74816b1daa31d2e41ba535213fcdc1f5, type: 3}
-  deathVFX: {fileID: 5086115071040521533, guid: 6362c430483e6fb49a06371c6330c431, type: 3}
-  spawnParent: {fileID: 0}
-  enemyHealth: 3
-  score: 500
---- !u!65 &6539835449532309504
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407326995469207860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6, y: 2, z: 12}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &407326995603081848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,6 +154,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa5781bb5b506524782c6e082a5127e9, type: 3}
+--- !u!1 &405936497457504262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1460879103847038, guid: aa5781bb5b506524782c6e082a5127e9, type: 3}
+  m_PrefabInstance: {fileID: 407326995603081848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &412065594855849136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4766139130558152, guid: aa5781bb5b506524782c6e082a5127e9, type: 3}
