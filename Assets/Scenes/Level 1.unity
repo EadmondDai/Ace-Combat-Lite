@@ -130,6 +130,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 409548463, guid: b83067dfd52186841a52c414143924f0, type: 3}
+      propertyPath: m_Size.x
+      value: 6.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 409548463, guid: b83067dfd52186841a52c414143924f0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 409548463, guid: b83067dfd52186841a52c414143924f0, type: 3}
+      propertyPath: m_Size.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144689572123433537, guid: b83067dfd52186841a52c414143924f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144689572123433537, guid: b83067dfd52186841a52c414143924f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.361
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489491934228419784, guid: b83067dfd52186841a52c414143924f0, type: 3}
+      propertyPath: pitchFactor
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489491934228419784, guid: b83067dfd52186841a52c414143924f0, type: 3}
+      propertyPath: yawFactor
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5253993008771630352, guid: b83067dfd52186841a52c414143924f0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -140,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5253993008771630353, guid: b83067dfd52186841a52c414143924f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.13
+      value: 41.37
       objectReference: {fileID: 0}
     - target: {fileID: 5253993008771630353, guid: b83067dfd52186841a52c414143924f0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -384,7 +412,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5637851586
+  m_text: '0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3649f5ca628b54c4dafae53352e21ef9, type: 2}
   m_sharedMaterial: {fileID: -6331893591051420018, guid: 3649f5ca628b54c4dafae53352e21ef9, type: 2}
@@ -593,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f098711b92d1e37458d7f0f1415c584c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 701791742}
   score: 0
 --- !u!114 &868035143
 MonoBehaviour:
@@ -877,6 +908,10 @@ PrefabInstance:
     - target: {fileID: 407326995469207860, guid: 24455d07614a7cb4997bf8a42b03ec87, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 412065594855849136, guid: 24455d07614a7cb4997bf8a42b03ec87, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6153235569598771215, guid: 24455d07614a7cb4997bf8a42b03ec87, type: 3}
       propertyPath: spawnParent

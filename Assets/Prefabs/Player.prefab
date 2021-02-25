@@ -223,6 +223,26 @@ PrefabInstance:
       propertyPath: EmissionModule.enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 658030614128357821, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: CollisionModule.quality
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 658030614128357821, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 658030614128357823, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 658030614128357823, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 658030614128357823, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.264
+      objectReference: {fileID: 0}
     - target: {fileID: 1076147066230472839, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: delayLoadingTime
       value: 1.5
@@ -235,9 +255,29 @@ PrefabInstance:
       propertyPath: yawFactor
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 5847496264238915852, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847496264238915852, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847496264238915852, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.053
+      objectReference: {fileID: 0}
     - target: {fileID: 5847496264238915854, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: EmissionModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847496264238915854, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: CollisionModule.quality
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847496264238915854, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}

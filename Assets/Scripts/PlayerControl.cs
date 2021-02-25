@@ -60,8 +60,10 @@ public class PlayerControl : MonoBehaviour
     {
         foreach (GameObject laser in lasers)
         {
-            var emissionSystem = laser.GetComponent<ParticleSystem>().emission;
-            emissionSystem.enabled = active;
+            var particleSystem = laser.GetComponent<ParticleSystem>();
+            particleSystem.startSpeed = particleSystem.startSpeed + gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+            var emmisionSystem = particleSystem.emission;
+            emmisionSystem.enabled = active;
         }
     }
 
