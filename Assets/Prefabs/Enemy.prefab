@@ -74,9 +74,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a82315839deb4841a48a53f75c9a7de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 5086115071040521533, guid: 74816b1daa31d2e41ba535213fcdc1f5, type: 3}
   deathVFX: {fileID: 5086115071040521533, guid: 6362c430483e6fb49a06371c6330c431, type: 3}
   spawnParent: {fileID: 0}
-  score: 0
+  enemyHealth: 3
+  score: 500
 --- !u!65 &6539835449532309504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -144,6 +146,10 @@ PrefabInstance:
     - target: {fileID: 4766139130558152, guid: aa5781bb5b506524782c6e082a5127e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766139130558152, guid: aa5781bb5b506524782c6e082a5127e9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa5781bb5b506524782c6e082a5127e9, type: 3}
