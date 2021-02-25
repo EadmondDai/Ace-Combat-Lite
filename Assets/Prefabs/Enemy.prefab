@@ -75,6 +75,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 5086115071040521533, guid: 6362c430483e6fb49a06371c6330c431, type: 3}
+  spawnParent: {fileID: 0}
+  score: 0
 --- !u!65 &6539835449532309504
 BoxCollider:
   m_ObjectHideFlags: 0
