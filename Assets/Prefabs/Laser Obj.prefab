@@ -133,7 +133,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &-1529772300778538893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,3 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionEnableDelay: 0.2
   liveTime: 10
+  hitEffect: {fileID: 5086115071040521533, guid: 74816b1daa31d2e41ba535213fcdc1f5, type: 3}
+  hitSpawnParent: {fileID: 0}
+  selfDestroyDelay: 1
