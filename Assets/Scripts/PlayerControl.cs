@@ -21,9 +21,15 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float controlPitchFactor = -100f;
     [SerializeField] float controlRollFactor = -5;
 
-    [Tooltip("Your friendly enemy killing neibhbor")]
-    [SerializeField] GameObject[] lasers;
+    //[Tooltip("Your friendly enemy killing neibhbor")]
+    //[SerializeField] GameObject[] lasers;
 
+    [SerializeField] GameObject laserObj;
+    [SerializeField] GameObject[] fireingPosition;
+    [SerializeField] float firingRate = 0.2f;
+    [SerializeField] float firingSpeedFactor = 200.0f;
+
+    private float nextFireTime = 0;
     protected float xMove, yMove;
 
     // Start is called before the first frame update
@@ -45,26 +51,43 @@ public class PlayerControl : MonoBehaviour
 
     private void handleFireing()
     {
-        // If press down fire then shooting is enabled.
+        //// If press down fire then shooting is enabled.
+        //if (Input.GetButton("Fire1"))
+        //{
+        //    toggleLaser(true);
+        //}
+        //else
+        //{
+        //    toggleLaser(false);
+        //}
+
         if (Input.GetButton("Fire1"))
         {
-            toggleLaser(true);
-        }
-        else
-        {
-            toggleLaser(false);
+            if(nextFireTime <= Time.time)
+            {
+                nextFireTime = Time.time + firingRate;
+                foreach(GameObject lazerSpawnObj in fireingPosition)
+                {
+                    Vector3 forwardVector = lazerSpawnObj.transform.forward;
+                    var laser = Instantiate(laserObj, lazerSpawnObj.transform.position, lazerSpawnObj.transform.rotation);
+                    laser.transform.Rotate(new Vector3(90, 0, 0), Space.Self);
+                    //Vector3 curSpeed = lazerSpawnObj.GetComponent<Rigidbody>().velocity;
+                    laser.GetComponent<Rigidbody>().velocity = forwardVector * firingSpeedFactor;
+                }
+            }
         }
     }
 
     private void toggleLaser(bool active)
     {
-        foreach (GameObject laser in lasers)
-        {
-            var particleSystem = laser.GetComponent<ParticleSystem>();
-            //particleSystem.startSpeed = particleSystem.startSpeed + gameObject.GetComponent<Rigidbody>().velocity.magnitude;
-            var emmisionSystem = particleSystem.emission;
-            emmisionSystem.enabled = active;
-        }
+        // Don't use this unless particle collision problem is solved.
+        //foreach (GameObject laser in lasers)
+        //{
+        //    var particleSystem = laser.GetComponent<ParticleSystem>();
+        //    //particleSystem.startSpeed = particleSystem.startSpeed + gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+        //    var emmisionSystem = particleSystem.emission;
+        //    emmisionSystem.enabled = active;
+        //}
     }
 
     private void handleRotation(float xMove, float yMove)
