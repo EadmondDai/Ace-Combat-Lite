@@ -146,6 +146,22 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 409548463, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_Size.x
+      value: 7.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 409548463, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_Size.y
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 409548463, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_Size.z
+      value: 8.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 409548463, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: m_Center.z
+      value: -1.44
+      objectReference: {fileID: 0}
     - target: {fileID: 1510364872509504, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: m_Name
       value: PlayerShip
@@ -196,7 +212,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5363513115417653125, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: firingSpeedFactor
-      value: 100
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363513115417653125, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: pitchFactor
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363513115417653125, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+      propertyPath: yawFactor
+      value: -0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2551801757917614136}
   - component: {fileID: 2526634981315157346}
   - component: {fileID: 2537183917077159908}
+  - component: {fileID: 870037514}
+  - component: {fileID: 870037513}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -82,6 +84,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &870037514
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549370129906776754}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!114 &870037513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549370129906776754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a82315839deb4841a48a53f75c9a7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 5086115071040521533, guid: 74816b1daa31d2e41ba535213fcdc1f5, type: 3}
+  deathVFX: {fileID: 5086115071040521533, guid: 6362c430483e6fb49a06371c6330c431, type: 3}
+  spawnParent: {fileID: 0}
+  enemyHealth: 3
+  score: 300
 --- !u!1 &2549532673897698068
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,11 +346,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2555443106967270734}
-  - component: {fileID: 2788244343378659918}
-  - component: {fileID: 7276087537556324398}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -339,36 +372,3 @@ Transform:
   m_Father: {fileID: 2551801757917614136}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2788244343378659918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2550147263983134750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a82315839deb4841a48a53f75c9a7de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 5086115071040521533, guid: 74816b1daa31d2e41ba535213fcdc1f5, type: 3}
-  deathVFX: {fileID: 5086115071040521533, guid: 6362c430483e6fb49a06371c6330c431, type: 3}
-  spawnParent: {fileID: 0}
-  enemyHealth: 3
-  score: 300
---- !u!54 &7276087537556324398
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2550147263983134750}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1

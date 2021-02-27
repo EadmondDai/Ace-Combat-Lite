@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1529772300778538893}
   m_Layer: 0
   m_Name: Laser Obj
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionEnableDelay: 0.2
-  liveTime: 10
-  hitEffect: {fileID: 5086115071040521533, guid: 74816b1daa31d2e41ba535213fcdc1f5, type: 3}
-  hitSpawnParent: {fileID: 0}
-  selfDestroyDelay: 1
+  liveTime: 5

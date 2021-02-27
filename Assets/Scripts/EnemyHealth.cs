@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] GameObject hitEffect;
@@ -15,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        spawnParent = GameObject.FindGameObjectWithTag("HitParent");
         //gameObject.AddComponent<Rigidbody>();
         //var rigidBody = FindObjectOfType<Rigidbody>();
         //rigidBody.useGravity = false;
@@ -41,16 +43,16 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print(name + " hit " + other.name + " with tag " + other.tag);
         if (other.tag != "Laser") return;
 
         enemyHealth--;
-        if (enemyHealth > 0)
+        GameObject hitVFS = Instantiate(hitEffect, other.transform.position, other.transform.rotation);
+
+        if (enemyHealth <= 0)
         {
-            GameObject hitVFS = Instantiate(hitEffect, transform.position, transform.rotation);
-        }
-        else
-        {
-            scoreBoard.IncreaseScore(score);
+            if(scoreBoard)
+                scoreBoard.IncreaseScore(score);
 
             GameObject newObj = Instantiate(deathVFX, transform.position, transform.rotation);
             newObj.transform.parent = spawnParent.transform;

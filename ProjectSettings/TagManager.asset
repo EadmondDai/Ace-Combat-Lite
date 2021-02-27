@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Laser
   - HitParent
+  - Enemy
   layers:
   - Default
   - TransparentFX
