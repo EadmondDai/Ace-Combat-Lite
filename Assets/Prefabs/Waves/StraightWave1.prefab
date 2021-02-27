@@ -1,24 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &3101333968199304086
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6300759167274410557}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3101333968710880664
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3101333968710880664}
-  m_LocalRotation: {x: -0.0020110158, y: -0.9977157, z: 0.03443386, w: -0.058083665}
+  m_LocalRotation: {x: 0.0020132791, y: 0.99771553, z: -0.034430746, w: 0.05808742}
   m_LocalPosition: {x: -14.22, y: -29.68, z: 357}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -52,7 +33,7 @@ Transform:
   - {fileID: 7480899725239992985}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.953, y: 173.336, z: 0.001}
 --- !u!320 &3101333968710880678
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -77,6 +58,25 @@ PlayableDirector:
   m_ExposedReferences:
     m_References:
     - 8b3badedd29f4c147b4bc4f542732b8a: {fileID: 0}
+--- !u!95 &3101333968199304086
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6300759167274410557}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &3101333969035207197
 Animator:
   serializedVersion: 3
