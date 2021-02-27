@@ -216,19 +216,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5363513115417653125, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: pitchFactor
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5363513115417653125, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: yawFactor
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5363513115417653125, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: xRange
-      value: 10
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5363513115417653125, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: yRange
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
