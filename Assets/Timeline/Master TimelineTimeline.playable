@@ -742,6 +742,33 @@ MonoBehaviour:
   searchHierarchy: 0
   active: 1
   postPlayback: 2
+--- !u!114 &-7073037585344031406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
+  m_Name: Enemy Waves
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children:
+  - {fileID: 4615533485286624174}
+  - {fileID: 7561333290833532057}
+  - {fileID: -170210991292824678}
+  - {fileID: 5333934509046245048}
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
 --- !u!114 &-5897198289491154176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -824,7 +851,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: -7073037585344031406}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -913,10 +940,8 @@ MonoBehaviour:
   m_Version: 0
   m_Tracks:
   - {fileID: -4463905406745669091}
-  - {fileID: 4615533485286624174}
-  - {fileID: 7561333290833532057}
-  - {fileID: -170210991292824678}
-  - {fileID: 5333934509046245048}
+  - {fileID: -7073037585344031406}
+  - {fileID: 8248478458909454544}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -963,7 +988,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: -7073037585344031406}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -1124,7 +1149,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: -7073037585344031406}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -1216,7 +1241,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: -7073037585344031406}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -1288,6 +1313,29 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: StraightWave2 (1)
+  m_Markers:
+    m_Objects: []
+--- !u!114 &8248478458909454544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
+  m_Name: Snake
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips: []
   m_Markers:
     m_Objects: []
 --- !u!114 &8591174920239895101
