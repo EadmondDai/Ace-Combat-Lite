@@ -34,10 +34,5 @@ public class PlayerCollision : MonoBehaviour
     {
         int curIdx = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(curIdx);
-    }
-
-    private void OnParticleCollision(GameObject other)
-    {
-        print(name + " hit " + other.name);
-    }
+    }d
 }

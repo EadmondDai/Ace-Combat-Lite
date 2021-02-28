@@ -43,7 +43,6 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print(name + " hit " + other.name + " with tag " + other.tag);
         if (other.tag != "Laser") return;
 
         enemyHealth--;
