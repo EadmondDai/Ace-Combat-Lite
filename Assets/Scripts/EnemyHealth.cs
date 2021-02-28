@@ -48,12 +48,10 @@ public class EnemyHealth : MonoBehaviour
 
         enemyHealth--;
         GameObject hitVFS = Instantiate(hitEffect, other.transform.position, other.transform.rotation);
+        if (scoreBoard) scoreBoard.IncreaseScore(score);
 
         if (enemyHealth <= 0)
         {
-            if(scoreBoard)
-                scoreBoard.IncreaseScore(score);
-
             GameObject newObj = Instantiate(deathVFX, transform.position, transform.rotation);
             newObj.transform.parent = spawnParent.transform;
             newObj.AddComponent<SelfDestruct>();
