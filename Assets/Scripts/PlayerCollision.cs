@@ -25,6 +25,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (!isCollisionEnabled) return;
         explosion.Play();
+        explosion.GetComponent<AudioSource>().Play();
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
         this.gameObject.GetComponent<PlayerControl>().enabled = false;
         Invoke("reloadScene", delayLoadingTime);
