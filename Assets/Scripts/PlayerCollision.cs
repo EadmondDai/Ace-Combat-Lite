@@ -34,5 +34,5 @@ public class PlayerCollision : MonoBehaviour
     {
         int curIdx = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(curIdx);
-    }d
+    }
 }
